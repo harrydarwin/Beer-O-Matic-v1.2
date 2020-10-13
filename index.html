@@ -3,9 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git and Command Line</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/58a0bdc5f9.js" crossorigin="anonymous"></script>
+    <title>Project 2</title>
 </head>
 <body>
-    <h1>We are on Github now</h1>
+    <header>
+        <div>
+            <div class="topBar">
+                <img class="beerMoj" src="./Assets/beer-emoji.png" alt="Beer emoji wearing shades and a cool grin">
+                <h1>
+                    The Beer-<span class="zero">O</span>-Matic
+                </h1>
+                <nav class="menu">
+                    <label for="hamburgerMenu">&#9776;</label>
+                    <input type="checkbox" id="hamburgerMenu">
+                    <ul class="mainNav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Beer</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="titlePage">
+            <h2 class="beerOclock">
+                Because it's 5 o'clock somewhere!
+            </h2>
+            <form>
+                <input type="text" name="userInput" id="userInput" placeholder="Find a Beer!" aria-placeholder="Input type of beer"></input>
+                <a href="#beerShow">
+                    <button type="submit">Find my Beer! <i class="fas fa-beer finder"></i></button>
+                </a>
+                <button id="random" name="random">Random Beer! <i class="fas fa-beer"></i></button>
+            </form>
+        </div>
+</header>
+<section id="beerShow" class="beerDisplay">
+    <div class="beerContainer">
+    </div>
+</section>
+<footer>
+    <h5 class="footing">
+        Made at Juno College by Harry Darwin <a href="https://www.linkedin.com/in/harry-guloien/" alt="To creators linkedin"><i class="fas fa-head-side-virus"></i></a>
+    </h5>
+</footer>
+
+
+<script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+<script src="script.js"></script>
 </body>
 </html>
