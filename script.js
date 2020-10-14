@@ -103,9 +103,10 @@ beerApp.getInput = () => {
 
                
            //find user chosen beer with query and beer array with filter
+           if (beerArray.find(beer => beer.name.includes(query))){
            const beerChoice = beerArray.filter((beer)=>{   
                if (beer.name.includes(query)){
-                   console.log(beer);
+                   console.log('its a match');
 
 
                    const htmlToAppend = 
@@ -126,13 +127,15 @@ beerApp.getInput = () => {
                    $('userInput').val('');
                     //scroll to beers
                     beerApp.scrolly();
-               } else {
-                $('.beerOclock').text('Apologies, this beer is not included in Version 1.0').addClass('outLine');
-               }
+                    $('.beerOclock').text('I could use a few of those myself!').addClass('outLine');}}
+           )} else {
+                   console.log('shit dont fit');
+                $('.beerOclock').text('Apologies, this beer may not be included in Version 1.0').addClass('outLine');
+               };
                
             })
-       });
-    }
+       };
+    
 
    
 //GETS BEER ARRAY AND RETURNS RANDOM BEER 
