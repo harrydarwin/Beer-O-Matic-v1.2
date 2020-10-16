@@ -67,7 +67,7 @@ beerApp.getInput = () => {
     //get beer data from API
     beerApp.getBeer = () => {
         const beerAPiInfo = $.ajax({
-            url: 'http://proxy.hackeryou.com',
+            url: 'https://proxy.hackeryou.com',
             method: 'GET',
             dataType: 'json',
             data: {
