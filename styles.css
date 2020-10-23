@@ -1,299 +1,528 @@
 html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
-        
+
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
-        
+
 html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
-        
+
 *, *:before, *:after {box-sizing: inherit}
-        
+
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
-html {
-    font-size: 62.5%;
-    padding: 0;
-    margin: 0;
+body,
+ul,
+h1,
+h2,
+h3,
+p {
+	margin: 0;
+	padding: 0;
 }
 
+ul {
+	list-style: none;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+.wrapper {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.headings {
+    font-family: 'Cardo', serif;
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+/* Normalizing & Initial setup code END */
+/* Project specific code begins */
+
+header {
+    background-image: url(./Assets/header-image.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    width: 100vw;
+    color: white;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+button {
+    font-size: 2.5rem;
+    font-weight: 100;
+    border: 2px solid #ffb100;
+    padding: 10px 20px;
+    background:none;
+}
+
+button.light:hover {
+    background: #232221;
+}
+
+button.dark:hover {
+    background: #232221;
+    color: white;
+}
+
+button.light {
+    color: white;   
+}
+
+button.dark {
+    color: #1F0A03;
+    margin-top: 2rem;
+}
+
+/* HERO SPLASH PAGE #1 SPECIFICS */
 .topBar {
     display: flex;
-    align-items: center;
-    background: #3E3E3F;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 9%;
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: 'Cardo', serif;
+    text-transform: uppercase;
+}
+
+header .logo {
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.mainNav ul {
+    margin-top: 1.5rem;
+    margin-right: 7.5rem;
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-family: 'Barlow', sans-serif;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mainNav a {
+    padding: 10px 10px;
+    margin: 10px 15px;
+    display: inline-block;
+}
+
+.mainNav a:hover {
+    border-bottom: 2px solid #FFB100;
+}
+
+.firstOp h2 {
+    font-family: 'Cardo', serif;
+    font-size: 8rem;
+    font-weight: 400;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-top: 6%;
+    width: 50%;
+}
+
+
+/* PART 2 + FLOATING PICTURE */
+
+.flexBox {
+    display: flex;
+}
+
+.flexBox img {
+    position: relative;
+    bottom: 100px;
+    width: 50%;
+    box-shadow: 20px 30px 5px rgba(0, 0, 0, 0.3)
+}
+
+.newArrivals {
+    width: 60%;
+    margin-top: 7rem;
+    padding-left: 8rem;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+}
+
+.section1 {
+    position: relative;
+}
+
+.section1 .headings {
+    margin-bottom: 30px;
+    color: #7B2F00;
+}
+
+.bodyText {
+    font-family: 'Barlow', sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    width: 80%;
+}
+
+
+
+/* SECTION 2 BLOG POST */
+
+.section2 {
+    background: url(./Assets/banner-image.jpg);
+    background-size: cover;
+    height: 75vh;
+    color: white;
+    position: relative;
+    padding: 5%;
+}
+
+.section2 .wrapper {
+    text-align: center;
+    justify-content: center;
+}
+
+.blogPost{
+    font-family: 'Barlow', sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    position: relative;
+}
+
+
+.accent {
+    width: 8.2rem;
+    height: 1px;
+    border-top: 2px solid #ffb100;
+    position: absolute;
+    left: 72px;  
+    bottom: -15px; 
+}
+
+.together {
+    display: flex;
+    justify-content: center;
+}
+.blogs {
+    display: flex;
+    font-size: 3rem;
+    font-weight: 400;
+    justify-content: space-between;
+}
+
+.section2 h2 {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.section2 a {
+    font-size: 5rem;
+    padding: 5px;
+    bottom: 10px;
+    position: relative;
+}
+
+.lChev {
+    justify-self: flex-start;
+}
+.bodyText {
+    width: 70%;
+}
+.section2 button {
+    margin: 30px;
+}
+
+.mobile {
+    display: none;
+}
+/* SECTION 3 FEATURED ITEMS */
+.section3 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.section3 h2 {
+    text-align: center;
+    color: #7B2F00;
+    margin-bottom: 50px;
+}
+
+.featuredItems {
+    display: flex;
+    justify-content: space-between;
+}
+.item {
+    width: calc(100vw / 3);
+    height: calc(100vw / 3);
+    max-width: 300px;
+    max-height: 300px;
+    position: relative;
+    margin-bottom: 50px;
+}
+.item::after {
+    content:'';
+    display: block;
+    padding-top: 100%;
+}
+.item:nth-of-type(3) {
+    margin-right: 0;
+}
+.item img {
+    border-radius: 50%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+}
+
+.ring {
+    object-position: 10% 100%;
+}
+
+.watch {
+    object-position: 70%;
+}
+
+.item h3 {
+    position: absolute;
+    z-index: 2;
+    bottom: -30px;
+    left: -30px;
+    background: #491400;
+    padding: 10px;
+    font-size: 28px;
+    font-weight: 500;
+    font-family: 'Barlow', sans-serif;
+    color: white;
+    width: 200px;
+    height: 110px;
+}
+
+span {
+    display: block;
+}
+
+span.price {
+    color: #FFB100;
+}
+
+
+
+/* SECTION 4 CONTACT */
+
+.section4 {
+    height: 100vh;
+    background: #1F0A03;
+    margin-top: 30px;
+    padding-top: 75px;
+    text-align: center;
     margin-bottom: 0;
 }
 
-.beerMoj {
-    width: 50px;
-    height: 135px;
-    margin: 25px;
+.section4 h2 {
+    color: white;
+    margin-bottom: 50px;
 }
 
-.beerMoj:hover {
-    animation: wiggle 1.5s ease-in-out infinite;
-}
-
-.mainNav {
+.contactForm {
     display: flex;
-    list-style-type: none;
-    font-size: 3.5rem;
-}
-
-.menu label, #hamburgerMenu {
-    display: none;
-}
-
-.mainNav li a {
-    text-decoration: none;
-    color: #FDD50A;
-    margin: 20px;
-    padding: 20px;
-}
-
-.mainNav li a:hover{
-    color: #D53827;
-    text-decoration: underline overline #FDD50A;
-}
-
-.mainNav li a:focus{
-    color: #D53827;
-    text-decoration: underline overline #FDD50A;
-}
-
-.titlePage {
-    background: url(./Assets/beerBubble.webp);
-    background-size: cover;
-    height: 120vh;
-    margin-top: 0;
-}
-
-h1 {
-    color: #D53827;
-    font-size: 5.5rem;
-    text-shadow: -3px 3px 2px #92222D;
-}
-
-
-h2 {
-    background: #92222D;
-    margin: 0;
-    color: #FDD50A;
-}
-
-.outLine {
-    border: 5px solid #FDD50A;
-}
-
-.beerOclock {
-    font-size: 3rem;
-    font-style: italic;
-    padding-left: 15%;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    margin-top: 175px;
+}
+
+input,
+textarea {
+    background: #1F0A03;
+    border: 1px solid white;
+    font-size: 1.5rem;
+    color: #ffb100
+
 }
 
 input {
-    height: 50px;
-    max-width: 750px;
-    font-size: 4rem;
-    background: rgba(213, 212, 212, .6);
-    border:2px solid rgba(213, 212, 212, .7);
-    box-shadow: -14px 21px 17px 0px rgba(0,0,0,0.75);
-    margin-bottom: 25px;
+    margin:15px;
+    width: 34.35vw;
+    height: 8vh;
+    padding: 10px;
+
 }
 
-button {
-    background: #D53827;
-    border: 3px solid #FDD50A;
-    border-radius: 25%;
-    height: 40px;
-    width: 200px;
-    color: #D5D4D4;
-    margin: 15px;
-    font-size: 2rem;
-    box-shadow: 0px 0px 18px 8px rgba(0,0,0,0.8);
-    transition: all;
-}
-
-button:hover {
-    color: #FDD50A;
-    cursor: pointer;
-}
-
-button:focus {
-    color: #FDD50A;
-    cursor: pointer;
-}
-
-button:active {
-    box-shadow: 0 0 3px 4px rgba(0,0,0,0.8);
-}
-
-button:hover{
-    width: 250px;
-}
-
-button:focus{
-    width: 250px;
-}
-
-.beerBorder {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0;
-    height: 60px;
-    font-size: 4rem;
-}
-
-.beerDisplay {
-    background: url(./Assets/beerBack.jpg);
-    background-size: cover;
-    padding: 50px;
-}
-
-.beerContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+textarea {
+    height: 30vh;
     width: 90%;
-    margin: auto;
+    padding: 10px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    resize: none;
 }
 
-.beerChoice {
-    border: 3px solid #92222D;
-    background: rgba(253, 213, 10, 0.5);
-    min-width: 360px;
-    min-height: 560px;
-    margin: auto;
-    margin-bottom: 25px;
-    padding: 5px;
-}
-
-h3 {
-    font-size: 2rem;
-    color: #3E3E3F;
-}
-
-h4{
-    font-size: 1.5rem;
-    color: #3E3E3F;
-    margin: 5px auto;
-
-}
+/* FOOTER */
 
 footer {
-    background: #3E3E3F;
-    color: #D53827;
-    font-size: 3rem;
-    height: auto;
-    width: 100%;
-    padding: 2px;
-    text-align: center;
+    background: #232221;
+    height: 12vh;
+    padding: 15px;
 }
 
-footer a {
-    color: #92222D;
-    font-size:4rem;
+p.logo {
+    color: white;
+    margin: 0 auto;
+    width: 75px;
+    font-size: 2rem;
 }
 
-@media (max-width: 768px){
-   .menu label {
-    display: inline-block;
-    color: #FDD50A;
-    background: #a02620;
-    font-size: 3rem;
-    font-style: normal;
-    padding: 10px;
-    text-align: center;
-  }
+/* FOOTER ENDS */
+/* RESPONSIVE CODE */
 
-  .mainNav li a{
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    border-top: 2px solid #92222D
-  }
-
-  .mainNav {
-      display: none;
-  }
- 
-  .menu {
-      display: flex;
-      flex-direction: column; 
+@media (max-width: 1160px) {
+    .item img {
+        display: static;
+    }
 }
 
-  .menu input:checked ~ .mainNav {
-      display: block;
-      margin-right: 45px;
-  }
 
+@media (max-width: 1160px) {
+    .featuredItems {
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+    max-width: 100%;
+    max-height: 100%;
 }
 
-@media (max-width: 445px){
-
-    input {
-        width: 350px;
+    .items {
+        padding: 50px;
+        max-width: 250px;
+        max-height: 250px;
     }
 
-    .topBar {
-        flex-direction: column;
+    .newArrivals {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 940px) {
+    .mainNav {
+        display: none;
+    }
+
+    .firstOp {
         text-align: center;
+        justify-content: center;
+        height: 275px;
+        margin-top: 13%;
     }
 
-    .mainNav li a {
-        margin: auto;
+    .firstOp h2 {
+        margin:auto;
+        width: 100%;
+        font-size: 6rem;
     }
 
-    .beerDisplay {
-        padding: 0;
+    .firstOp button {
+        font-size: 3rem;
+        border: 3px solid #ffb100;
+        padding: 30px 40px;
+        margin-top: 30px;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+        margin-top:20px;
+    }
+
+    .mobile .lChev,
+    .mobile .rChev {
+        margin: 30px 10px;
+    }
+    .section2 button {
         margin: 0;
     }
+}
 
-    .beerContainer {
-        margin: auto;
-        padding: 0;
-        justify-content: center;
+@media (max-width: 625px) {
+    .firstOp h2 {
+        font-size: 5rem;
+        margin-top: 15%;
+    }
+
+    .newArrivals  {
+        padding-left: 0;
+    }
+}
+
+@media (max-width:880px) {
+    .section1 .flexBox {
+        flex-direction: column;
+    }
+
+    .flexBox img {
+        position: static;
+        margin-top: 50px;
+        height: 100%;
         width: 100%;
     }
 
-    .beerChoice {
-        margin: 0;
-        padding: 0;
-        justify-content: center;
+    .newArrivals {
+        width: 100%;
+        height: auto;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newArrivals .bodyText {
+        width: 75%;
+    }
+
+    .newArrivals button {
+        width: 200px;
+    }
+
+    .section2 {
+        height: auto;
+    }
+
+    .item {
+        margin: 3em 0;
+        width: 250px;
+        height: 250px;
+    }
+
+    .item h3 {
+        left: 10%;
+    }
+
+    .contactForm {
+        flex-direction: column;
+    }
+
+    input {
+        width: 90%;
     }
 }
 
+@media (max-width: 400px) {
+    .firstOp h2 {
+        font-size: 4rem;
+        margin-top: 60px;
+    }
 
-@keyframes wiggle {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(-15deg);
-    }
-    50% {
-        transform: rotate(20deg);
-    }
-    75% {
-        transform: rotate(-15deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg)
-    }
-    100% {
-        transform: rotate(360deg);
+    .firstOp button {
+        transform: scale(.6)
     }
 }
